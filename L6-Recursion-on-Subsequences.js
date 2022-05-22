@@ -3,7 +3,11 @@ let subSequencesArr = [];
 
 function printSubsequences(index, subSequencesArr, arr, n) {
     if (index == n) {
-        console.log(subSequencesArr);
+        let result = ``
+        for (let index = 0; index < subSequencesArr.length; index++) {
+            result += ` ${subSequencesArr[index]} `;
+        }
+        console.log(`${result}`)
         return;
     }
     //take condition
