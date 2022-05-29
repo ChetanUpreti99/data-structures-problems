@@ -14,7 +14,7 @@ function printSubsequences(index, subSequencesArr, arr, n) {
     subSequencesArr.push(arr[index]);
     printSubsequences(index + 1, subSequencesArr, arr, arr.length);
     //not take condition
-    subSequencesArr.pop(arr[index]);
+    subSequencesArr.pop();
     printSubsequences(index + 1, subSequencesArr, arr, arr.length);
 }
 

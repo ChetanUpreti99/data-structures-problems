@@ -23,29 +23,29 @@ function print1toN(index, till) {
 //print1toN(1, 10);
 
 
-function print1toNBackTrack(index, till) {
+function print1toNBackTrack(index) {
 	if (index < 1) {
 		return;
 	}
-	print1toNBackTrack(index - 1, till);
+	print1toNBackTrack(index - 1);
 	console.log(index);
 }
 
-//print1toNBackTrack(10, 10);
+//print1toNBackTrack(10);
 
-function printNto1(index, till) {
+function printNto1(index) {
 	if (index < 1) {
 		return;
 	}
 	console.log(index);
 
-	printNto1(index - 1, till);
+	printNto1(index - 1);
 }
 
-//printNto1(10, 10);
+//printNto1(10);
 
 function printNto1BackTrack(index, till) {
-	if (index > 10) {
+	if (index > till) {
 		return;
 	}
 	printNto1BackTrack(index + 1, till);

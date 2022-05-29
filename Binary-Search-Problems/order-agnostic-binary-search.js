@@ -8,13 +8,13 @@ const orderAgnosticBinarySearch = (arr, target, start, last) => {
 		if (arr[mid] == target) {
 			return mid;
 		} else if (isASC) {
-			if (target >= arr[mid]) {
+			if (target > arr[mid]) {
 				start = mid + 1;
 			} else {
 				last = mid - 1;
 			}
 		} else {
-			if (target <= arr[mid]) {
+			if (target < arr[mid]) {
 				start = mid + 1;
 			} else {
 				last = mid - 1;
