@@ -22,4 +22,4 @@ function getCombinationSum(index, ds, candidates, target, n, combinations) {
 
 }
 
-combinationSum([2, 3, 6, 7], 7)
+combinationSum([2, 3, 6, 7], 7);

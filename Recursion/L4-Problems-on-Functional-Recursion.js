@@ -4,7 +4,7 @@ console.log(arr);
 
 
 function reverseAnArray(i, arr) {
-    if (i >= Math.floor(arr.length / 2)) {
+    if (i >= (arr.length >> 1)) {
         return;
     }
     swapArray(i, arr.length - i - 1, arr);
