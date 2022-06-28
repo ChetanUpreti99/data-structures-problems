@@ -5,7 +5,7 @@ function getFibByRecursion(num) {
 	return getFibByRecursion(num - 1) + getFibByRecursion(num - 2);
 }
 
-console.log(getFibByRecursion(10));
+console.log(getFibByRecursion(5));
 
 function getFibByMemoization(num, dpArr) {
 	if (num <= 1) {
