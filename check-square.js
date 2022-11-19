@@ -34,7 +34,7 @@ function isSquaresCheck(firstArr, secondArr) {
 
     // console.log(`firstArrMap`, firstArrMap, `secondArrMap`, secondArrMap);
 
-    for (const [key, value] of firstArrMap) {
+    for (const [key, value] in firstArrMap) {
         if (!secondArrMap.has(key * key) || secondArrMap.get(key * key) != value) {
             return false;
         } else {
