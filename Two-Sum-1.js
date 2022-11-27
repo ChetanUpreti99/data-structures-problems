@@ -18,7 +18,7 @@
  *   6. test code with test cases
  * 	 
  *   7. complexity
- *     	time complexity O(n2)
+ *     	time complexity O(n^2)
  * 	   	space complexity O(1)
  * 
  *   8. can we optimize our solution?
@@ -70,6 +70,10 @@
 }; */
 
 
+/**
+ * time O(n)
+ * space O(n)
+ */
 const twoSum = function (nums, target) {
 	let arrMap = new Map();
 	for (let index = 0; index < nums.length; index++) {
