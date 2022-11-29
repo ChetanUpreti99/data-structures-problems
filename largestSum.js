@@ -6,7 +6,7 @@ const findLargestSum = (arr, target) => {
     }
 
     let max = 0;
-    //number of times loop will run is arr.length-num+1
+    //number of times loop will run is arr.length-target+1
     for (let index = 0; index < arr.length - target + 1; index++) {
         let temp = 0;
         for (let j = 0; j < target; j++) {
