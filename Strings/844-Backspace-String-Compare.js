@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/backspace-string-compare/
+
 /**
  * 1. what happens when 2 #'s appear beside each other.
  * 2. is empty strings are equals
