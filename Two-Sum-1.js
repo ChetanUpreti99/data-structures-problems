@@ -3,12 +3,13 @@
  * 		negative and positive numbers?
  *      is duplicates?
  *      will there always be a solution available? if not then in case of not what's should we return.
- *      multiple pairs?
+ *     
+ * 		Can there be multiple pairs that add up to the target?
  *  2. Write some test cases?
  *    	[3, 4,5,6,7,3] 6
- *   	[3, 4,5,6,7,3] 45
+ *   	[3, 4,5,6,7,3] 45 null
  *      []  34          null
- *      [5]   6         null
+ *      [5]   5         null
  *      [1,4] 5         [0,1]
  * 
  *   3. figure out solution without code
