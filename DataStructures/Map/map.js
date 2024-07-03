@@ -13,6 +13,8 @@ map.set('d', 5);
 
 map.set([1, 2, 3], 5);
 
+console.log(map);
+
 
 
 map.delete('d');
@@ -23,7 +25,7 @@ console.log(map.has('d'));
 
 console.log(map.get('c'));
 
-console.log(map.size);
+console.log('map.size', map.size);
 
 for (const [key, value] of map) {
 	console.log(key, value);

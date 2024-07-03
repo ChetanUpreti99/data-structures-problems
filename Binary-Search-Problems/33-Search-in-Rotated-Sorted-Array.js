@@ -10,7 +10,7 @@ Output: -1
 Input: nums = [1], target = 0
 Output: -1
 */
-
+/* 
 function search(nums, target) {
     let low = 0;
     let high = nums.length - 1;
@@ -36,4 +36,7 @@ function search(nums, target) {
 };
 
 let nums = [4, 5, 6, 7, 0, 1, 2], target = 2;
-console.log(search(nums, target));
+console.log(search(nums, target)); */
+
+
+
