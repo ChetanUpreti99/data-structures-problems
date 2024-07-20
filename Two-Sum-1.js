@@ -75,20 +75,55 @@
  * time O(n)
  * space O(n)
  */
-const twoSum = function (nums, target) {
+/* const twoSum = function (nums, target) {
 	let arrMap = new Map();
 	for (let index = 0; index < nums.length; index++) {
-		const findingValueInMap = nums[index];
-		if (arrMap.has(findingValueInMap)) {
-			return [index, arrMap.get(findingValueInMap)];
+		const findingValueInMap = nums[index]; //1 , 4
+		if (arrMap.has(findingValueInMap)) { //false,true
+			return [index, arrMap.get(findingValueInMap)]; //[1,0]
 		} else {
-			const numberToBeFind = target - nums[index];
-			arrMap.set(numberToBeFind, index);
+			const numberToBeFind = target - nums[index]; //4
+			arrMap.set(numberToBeFind, index);// {4,0}
 
 		}
 	}
 	return null;
+}; */
+
+
+
+/**
+ Note: In the worst case(which rarely happens), the unordered_map takes O(N) to find an element. 
+ In that case, the time complexity will be O(N2). If we use map instead of unordered_map,
+ the time complexity will be O(N* logN) as the map data structure takes logN time to find an element.
+ */
+
+
+
+
+
+const twoSum = function (nums, target) {
+	if (!nums.length && nums.length == 1) {
+		return "NO";
+	}
+	if (Array.isArray(nums)) {
+		nums.sort((a, b) => a - b);
+	}
+	let left = 0;
+	let right = nums.length - 1;
+	while (left < right) {
+		if (nums[left] + nums[right] === target) {
+			return "YES";
+		} else if (nums[left] + nums[right] < target) {
+			left++;
+		} else {
+			right--;
+		}
+
+	}
+	return "NO";
 };
+
 
 console.log(twoSum([3, 4, 5, 6, 7, 3], 6));
 
@@ -96,3 +131,12 @@ console.log(twoSum([3, 4, 5, 6, 7, 3], 45));
 console.log(twoSum([], 34));
 console.log(twoSum([5], 6));
 console.log(twoSum([1, 4], 5));
+console.log(twoSum([2, 6, 5, 8, 11], 14));
+/**
+Time Complexity: O(N) + O(N*logN), where N = size of the array.
+Reason: The loop will run at most N times. And sorting the array will take N*logN time complexity.
+
+Space Complexity: O(1) as we are not using any extra space.
+
+Note: Here we are distorting the given array. So, if we need to consider this change, the space complexity will be O(N).
+ */
